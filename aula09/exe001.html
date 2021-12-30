@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background-color: rgb(90, 34, 196);
+            color: white;
+            font: normal 18pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+       // window.document.write('Olá, mundo!') exibe a frase Olá, Mundo!
+       //window.document.write(window.document.charset) exibe o padrão de caracteres utilizado
+       //window.document.write(window.navigator.appName) exibe o nome do navegador
+       //window.document.write(window.document.URL) exibe o nome da URL
+       //selecionando objetos
+       //Selecionando o 1° parágrafo
+       var corpo = window.document.body
+       corpo.style.background = 'black'
+       var p1 = window.document.getElementsByTagName('p')[0]
+       //exibindo o conteúdo da variável p1 que contém o valor da seleção do 1° parágrafo
+       window.document.write('Está escrito assim: ' + p1.innerText + '<br>')        
+       //exibindo o conteúdo do 2° parágrafo
+       var p2 = window.document.getElementsByTagName('p')[1]
+       p1.style.color = 'blue'
+       //window.document.write('Está escrito assim: ' + p2.innerText)
+       //com innerHTML exibe a formatação do html
+       window.document.write('Está escrito assim: ' + p2.innerHTML + '<br>') 
+       //exibindo um alerta com o conteúdo da variável p2
+       //window.alert(p2.innerText)
+       //selecionando a div msg, alterando a cor do fundo e o texto exibido           
+       /*var d = window.document.getElementById('msg')
+       d.style.background = 'green'      
+       d.innerText = 'Estou aguardando...'*/
+       //window.document.getElementsById('msg').innerText='Olá!' 
+       /*var d = window.document.getElementsByName('msg')[0] 
+       d.innerText = 'Olá!'
+       d.style.background = 'blue' */ 
+       //usando o query selector
+       var d = window.document.querySelector('div#msg')
+       d.style.color = 'blue'
+       d.style.background = 'white'
+       
+    </script>
+</body>
