@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votação</title>
+</head>
+<body>
+   <h1>Sistema de Votação</h1> 
+   <p>Digite sua idade : <input type="number" name="txtid" id="txtid">
+   <input type="button" value="Verificar" onclick="votar()"></p>
+   <div id="res">
+
+   </div>
+
+    <script>
+        function votar(){
+            var txtv = window.document.querySelector('input#txtid')
+            var res = window.document.querySelector('div#res')
+            var idade = Number(txtv.value)
+            res.innerHTML = `<p>Você tem <strong>${idade} anos</strong></p>`
+            if(idade < 16){
+                res.innerHTML += '<p>Vocé ainda não pode votar.</p>'
+            }else if(idade < 18 || idade > 65){
+                res.innerHTML += '<p>Seu voto é opcional!</p>'
+            }else{
+                res.innerHTML += '<p>Você já pode votar se quiser!</p>'
+            }
+            
+        }
+    </script>
+</body>
+</html>
