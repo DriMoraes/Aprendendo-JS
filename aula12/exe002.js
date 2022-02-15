@@ -2,7 +2,7 @@
 var agora = new Date()
 var hora = agora.getHours()*/
 
-var hora = 22
+var hora = 10
 
 console.log(`Agora são exatamente ${hora} horas`)
 if(hora >5 && hora < 12){
