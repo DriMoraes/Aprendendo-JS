@@ -31,6 +31,5 @@ img {
 }
 
 div {
-    text-align: center;
-    padding: 8px;
+   float: right;
 }
