@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(0, 102, 255);
+    background-color: rgb(96, 84, 139);
     font: normal 15pt Arial;
     
 }
@@ -31,5 +31,6 @@ img {
 }
 
 div {
-   float: right;
+   text-align: center;
+   padding: 8px;
 }
