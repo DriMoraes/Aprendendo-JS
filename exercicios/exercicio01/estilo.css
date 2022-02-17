@@ -24,8 +24,9 @@ footer {
     font-style: italic;
 }
 
-img {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
+
+div {
+    text-align: center;
+    padding: 8px;
 }
+
